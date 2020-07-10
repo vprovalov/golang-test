@@ -1,3 +1,11 @@
 language: go
 
 go: "1.14"
+
+addons:
+  artifacts:
+    paths:
+      - $TRAVIS_BUILD_DIR/goland-test
+
+script:
+  GOOS=linux GOARCH=amd64 go build
